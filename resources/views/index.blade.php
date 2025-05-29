@@ -20,7 +20,7 @@
             <!-- Text and Button Section -->
             <div>
                 <h2 class="font-medium font-gothic mb-10 ml-[170px] tracking-wider text-4xl mr-[100px] sm:text-5xl sm:mr-[190px] md:text-6xl md:mr-[190px] lg:text-7xl text-center lg:text-left">
-                    2025<br>New Watche
+                    2025<br>New Watches
                 </h2>
                 <div class="text-center lg:text-left">
                 <a href="{{ route('products.new_watches') }}">
