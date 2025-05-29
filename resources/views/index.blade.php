@@ -1,7 +1,9 @@
 @include("layouts.mainNavigation")
 
 
-@section("title", "Rolex")
+
+
+@section('title')
 
 
 
