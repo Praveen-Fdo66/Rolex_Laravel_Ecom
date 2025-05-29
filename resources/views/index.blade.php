@@ -25,7 +25,7 @@
                 <div class="text-center lg:text-left">
                 <a href="{{ route('products.new_watches') }}">
                     <button class="bg-[#4D75B0] hover:bg-[#295392] text-white font-medium text-xl mr-[500px] sm:mr-[190px] md:text-2xl lg:text-3xl font-gothic py-3 px-6 rounded w-40 md:w-48 ml-[170px] md:mr-[190px]">
-                        Continu
+                        Continue
                     </button>
                 </a>
                 </div>
