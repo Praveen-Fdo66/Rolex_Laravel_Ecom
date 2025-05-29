@@ -141,8 +141,13 @@
                 <a href="{{ route('products.create') }}" class="hover:text-blue-600 transition">Products</a>
             @endif
         @endauth
-
+        @if(auth()->user()->role === 'user')
         <a href="{{ route('user.dashboard') }}" class="hover:text-blue-600 transition">Dashboard</a>
+        @endif
+
+        @if(auth()->user()->role === 'admin')
+        <a href="{{ route('dashboard') }}" class="hover:text-blue-600 transition">Dashboard</a>
+        @endif
 
         <form method="POST" action="{{ route('logout') }}" class="inline">
         @csrf
