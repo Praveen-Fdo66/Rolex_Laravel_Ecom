@@ -1,0 +1,3 @@
+build:
+    directories:
+        - storage/app/public  # Makes storage persistent
