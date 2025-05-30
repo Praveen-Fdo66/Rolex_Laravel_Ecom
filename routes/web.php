@@ -109,7 +109,7 @@ Route::get('about', function () {
 
 
 
-Route::get('/', function(){
+Route::get('/link', function(){
     Artisan::call('storage:link');
 });
 
