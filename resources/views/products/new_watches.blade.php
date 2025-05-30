@@ -43,12 +43,13 @@
 </section>
 
 
+
 @livewire('product-list')
 
 
- 
+ @include("layouts.footerNav")
 
-@include("layouts.footerNav")
+
         
 
     <script>
@@ -77,7 +78,7 @@
                     }
                 });
     
-                // Hide mobile navigation when resizing to desktop (>= 768px)
+                // Hide mobile navigation when resizing to desktop 
                 window.addEventListener('resize', () => {
                     if (window.innerWidth >= 768) {
                         if (mobileNav) mobileNav.classList.add('hidden');

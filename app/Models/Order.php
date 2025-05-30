@@ -18,6 +18,6 @@ class Order extends Eloquent
 
     public function product()
 {
-    return $this->belongsTo(Product::class, 'watch_id', '_id'); // for MongoDB, use '_id' as foreign key
+    return $this->belongsTo(Product::class, 'watch_id', '_id'); // for MongoDB, use '_id' 
 }
 }

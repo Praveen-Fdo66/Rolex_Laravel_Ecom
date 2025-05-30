@@ -14,7 +14,7 @@ class ProductList extends Component
 
     public function render()
     {
-        // MongoDB regex-based search
+        // MongoDB 
         $filtered = Product::raw(function ($collection) {
             return $collection->find([
                 'name' => ['$regex' => $this->search, '$options' => 'i']

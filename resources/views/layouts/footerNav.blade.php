@@ -66,9 +66,9 @@
                     </div>
                     <div class="flex flex-col pr-[60px] pt-[50px] pb-[60px] text-center">
     
-                        <span class="my-2"><a href="index.php" class="text-black font-gothic  text-xl text-md hover:text-zinc-700 md:mt-0 mb-2" >HOME</a></span>
-                        <span class="my-2"><a href="newwatches.php" class="text-black font-gothic  text-xl text-md hover:text-zinc-700 md:mt-0 mb-2">NEW WACTHES 2025</a></span>
-                        <span class="my-2"><a href="aboutrolex.php" class="text-black font-gothic  text-xl text-md hover:text-zinc-700 md:mt-0 mb-2">ABOUT ROLEX</a></span>
+                        <span class="my-2"><a href="{{ route('home') }}" class="text-black font-gothic  text-xl text-md hover:text-zinc-700 md:mt-0 mb-2" >HOME</a></span>
+                        <span class="my-2"><a href="{{ route('products.new_watches') }}" class="text-black font-gothic  text-xl text-md hover:text-zinc-700 md:mt-0 mb-2">NEW WACTHES 2025</a></span>
+                        <span class="my-2"><a href="{{ route('about') }}" class="text-black font-gothic  text-xl text-md hover:text-zinc-700 md:mt-0 mb-2">ABOUT ROLEX</a></span>
                     </div>
                 </div>
             </div>

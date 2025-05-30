@@ -30,3 +30,4 @@
     </div>
 </x-app-layout>
 
+@include("layouts.footerNav")

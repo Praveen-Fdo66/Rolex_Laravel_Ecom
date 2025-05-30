@@ -131,3 +131,4 @@
 </div>
 
 </div>
+ @include("layouts.footerNav")

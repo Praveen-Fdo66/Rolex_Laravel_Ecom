@@ -36,7 +36,7 @@
                 menuToggle.addEventListener('click', () => {
                     if (mobileNav) {
                         mobileNav.classList.toggle('hidden');
-                        mobileNav.classList.toggle('flex'); // Apply flex layout if showing
+                        mobileNav.classList.toggle('flex'); 
                     }
                     if (navLinks) {
                         navLinks.classList.toggle('hidden');
@@ -51,7 +51,7 @@
                     }
                 });
     
-                // Hide mobile navigation when resizing to desktop (>= 768px)
+                // Hide mobile navigation when resizing to desktop 
                 window.addEventListener('resize', () => {
                     if (window.innerWidth >= 768) {
                         if (mobileNav) mobileNav.classList.add('hidden');
