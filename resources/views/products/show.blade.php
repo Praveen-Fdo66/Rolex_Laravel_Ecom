@@ -10,7 +10,7 @@
         <div class="w-full">
             <div class="bg-white rounded-2xl shadow overflow-hidden">
                 <img 
-                    src="{{ $product->image }}" 
+                    src="{{ asset('storage/' . $product->image) }}" 
                     alt="{{ $product->name }}" 
                     class="w-full h-auto object-contain aspect-square"
                 >

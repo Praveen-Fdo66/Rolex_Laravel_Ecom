@@ -39,16 +39,12 @@ class ProductController extends Controller
     // $originalName = $image->getClientOriginalName(); // watch1.png
     // $filename = $originalName;
     // $imagePath = $image->storeAs('products', $filename, 'public');
-
-        // Upload to Laravel Cloud (S3-compatible)
-    $image = $request->file('image');
-    $path = $request->file('image')->store('products', 's3');
-    $url = Storage::disk('s3')->url($path); // public URL
+    
 
         Product::create([
             'name' => $request->name,
             'price' => $request->price,
-            'image' => $url,
+            'image' => $imagePath,
         ]);
 
         return redirect()->route('products.new_watches')->with('success', 'Product added successfully!');
@@ -79,13 +75,19 @@ public function update(Request $request, $id)
 
     // Check if a new image is uploaded
     if ($request->hasFile('image')) {
-        // Optionally: delete old image if using cloud, if needed
-        // You'd need to extract the file path from $product->image if deleting is required.
+        // Delete the old image if it exists
+        if ($product->image && Storage::disk('public')->exists($product->image)) {
+            Storage::disk('public')->delete($product->image);
+        }
 
-        // Upload new image to S3
-        $path = $request->file('image')->store('products', 's3');
-        $url = Storage::disk('s3')->url($path);
-        $product->image = $url;
+        // Get uploaded file
+        $image = $request->file('image');
+        // Get original file name like watch1.png
+        $originalName = $image->getClientOriginalName();
+        // Store file with original name under storage/app/public/products
+        $imagePath = $image->storeAs('products', $originalName, 'public');
+        // Save image path to DB
+        $product->image = $imagePath;
 
 
         // // Store the new image

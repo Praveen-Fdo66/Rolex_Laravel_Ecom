@@ -23,7 +23,7 @@
         <a href="{{ route('products.show', $product->_id) }}" class="block rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all bg-white max-w-xs mx-auto">
             <div class="w-full aspect-square bg-gray-100 flex items-center justify-center">
                 <img 
-                    src="{{ $product->image }}" 
+                    src="{{ asset('storage/' . $product->image) }}" 
                     alt="{{ $product->name }}" 
                     class="object-contain w-full h-full p-4"
                 >

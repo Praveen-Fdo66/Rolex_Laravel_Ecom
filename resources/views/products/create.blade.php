@@ -88,7 +88,7 @@
                         <tr class="border-b">
                             <td class="p-2 text-center font-semibold text-xs">{{ $index + 1 }}</td>
                             <td class="p-2">
-                                <img src="{{ $product->image }}" class="w-8 mx-auto rounded"
+                                <img src="{{ asset('storage/' . $product->image) }}" class="w-8 mx-auto rounded"
                                     alt="Product Image">
                             </td>
                             <td class="p-2 block uppercase tracking-wide text-gray-700 text-sm font-bold mt-4">
