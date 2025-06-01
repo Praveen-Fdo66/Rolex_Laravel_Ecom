@@ -48,15 +48,17 @@ return [
         ],
 
 
-        'gcs' => [
-             'driver' => 'gcs',
-             'project_id' => env('GOOGLE_CLOUD_PROJECT_ID'),
-             'bucket' => env('GOOGLE_CLOUD_STORAGE_BUCKET'),
-             'key_file' => env('GOOGLE_CLOUD_KEY_FILE'), // Absolute path to JSON key
-             'path_prefix' => env('GOOGLE_CLOUD_STORAGE_PATH_PREFIX', null),
-             'apiUri' => env('GOOGLE_CLOUD_STORAGE_API_URI', null),
-             'visibility' => 'public',
+        's3' => [
+            'driver' => 's3',
+            'key' => env('AWS_ACCESS_KEY_ID'),
+            'secret' => env('AWS_SECRET_ACCESS_KEY'),
+            'region' => env('AWS_DEFAULT_REGION'),
+            'bucket' => env('AWS_BUCKET'),
+            'url' => env('AWS_ENDPOINT'),
+            'endpoint' => env('AWS_ENDPOINT'),
+            'use_path_style_endpoint' => env('AWS_USE_PATH_STYLE_ENDPOINT', false),
 ],
+
 
 
 

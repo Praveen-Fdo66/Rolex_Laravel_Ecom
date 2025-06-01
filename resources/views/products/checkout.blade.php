@@ -9,7 +9,7 @@
         <div class="bg-white rounded-2xl shadow p-6">
             <h3 class="text-xl font-semibold mb-4 text-gray-800">Product Summary</h3>
             <div class="flex flex-col items-center">
-                <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}" class="w-56 h-56 object-contain rounded-xl shadow mb-4">
+                <img src="{{ $product->image }}" alt="{{ $product->name }}" class="w-56 h-56 object-contain rounded-xl shadow mb-4">
                 <div class="text-center">
                     <h4 class="text-2xl font-bold text-gray-900">{{ $product->name }}</h4>
                     <p class="text-indigo-600 text-xl mt-2">LKR {{ number_format($product->price, 2) }}</p>
