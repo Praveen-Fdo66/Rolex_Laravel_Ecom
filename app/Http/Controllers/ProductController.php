@@ -41,6 +41,7 @@ class ProductController extends Controller
     // $imagePath = $image->storeAs('products', $filename, 'public');
 
         // Upload to Laravel Cloud (S3-compatible)
+    $image = $request->file('image');
     $path = $request->file('image')->store('products', 's3');
     $url = Storage::disk('s3')->url($path); // public URL
 
