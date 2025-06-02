@@ -35,10 +35,10 @@ class ProductController extends Controller
             'image' => 'required|image|mimes:jpg,jpeg,png|max:2048',
         ]);
 
-    // $image = $request->file('image');
-    // $originalName = $image->getClientOriginalName(); // watch1.png
-    // $filename = $originalName;
-    // $imagePath = $image->storeAs('products', $filename, 'public');
+    $image = $request->file('image');
+    $originalName = $image->getClientOriginalName(); // watch1.png
+    $filename = $originalName;
+    $imagePath = $image->storeAs('products', $filename, 'public');
     
 
         Product::create([
